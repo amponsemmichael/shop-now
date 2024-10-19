@@ -90,6 +90,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>devops-integration</fileName>
 	</build>
 
 </project>
