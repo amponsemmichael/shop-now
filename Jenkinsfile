@@ -6,10 +6,13 @@ pipeline {
     }
 
     stages{
-        stage('Build') {
+        stage('Install Docker') {
             steps {
-                sh 'docker --version'
-                // your docker commands
+                sh '''
+                    curl -fsSL https://get.docker.com -o get-docker.sh
+                    sh get-docker.sh
+                    usermod -aG docker jenkins
+                '''
             }
         }
 
