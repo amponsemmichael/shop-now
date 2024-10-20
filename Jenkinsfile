@@ -34,18 +34,18 @@ pipeline {
                 }
             }
         }
-        stage('Push image to Hub'){
-            steps{
-                script{
-                   // withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   // sh 'docker login -u amponsem17 -p ${dockerhubpwd}'
+//         stage('Push image to Hub'){
+//             steps{
+//                 script{
+//                    // withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
+//                    // sh 'docker login -u amponsem17 -p ${dockerhubpwd}'
 
-}
-                  // sh 'docker push devops-integration'
-                    echo 'pushing image to docker hub...'
-                }
-            }
-        }
+// }
+//                   // sh 'docker push devops-integration'
+//                     echo 'pushing image to docker hub...'
+//                 }
+//             }
+//         }
         // stage('Deploy to k8s'){
         //     steps{
         //         script{
