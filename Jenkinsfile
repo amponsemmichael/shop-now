@@ -37,8 +37,8 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u amponsem17 -p ${dockerhubpwd}'
+                   // withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
+                   // sh 'docker login -u amponsem17 -p ${dockerhubpwd}'
 
 }
                   // sh 'docker push devops-integration'
