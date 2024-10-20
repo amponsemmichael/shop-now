@@ -3,7 +3,15 @@ pipeline {
     tools{
         maven 'maven'
         jdk 'JDK17'  
-        dockerTool 'docker'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'docker --version'
+                // your docker commands
+            }
+        }
     }
     stages{
         stage('Build Maven'){
