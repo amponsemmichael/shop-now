@@ -5,15 +5,14 @@ pipeline {
         jdk 'JDK17'  
     }
 
-    stages {
+    stages{
         stage('Build') {
             steps {
                 sh 'docker --version'
                 // your docker commands
             }
         }
-    }
-    stages{
+
         stage('Build Maven'){
             steps{
                 checkout scmGit(branches: [[name: '*/main']], 
@@ -22,6 +21,7 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        
         stage('Build docker image'){
             steps{
                 script{
